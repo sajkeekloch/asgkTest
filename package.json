@@ -1,6 +1,7 @@
 {
   "name": "asgk-group-test",
   "version": "0.0.0",
+  "homepage": "https://sajkeekloch.github.io/asgkTest/",  
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -18,7 +19,12 @@
     "@angular/platform-browser": "~13.2.0",
     "@angular/platform-browser-dynamic": "~13.2.0",
     "@angular/router": "~13.2.0",
-    "rxjs": "~7.5.0",
+    "@ngrx/effects": "^13.0.2",
+    "@ngrx/router-store": "^13.0.2",
+    "@ngrx/store": "^13.0.2",
+    "@ngrx/store-devtools": "^13.0.2",
+    "normalize-scss": "^7.0.1",
+    "rxjs": "^7.5.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

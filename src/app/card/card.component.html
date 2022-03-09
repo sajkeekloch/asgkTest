@@ -1,0 +1,20 @@
+<li class="userCard">
+    <div class="userCard__info">
+        <h4 class="info__firstName">{{firstName}}</h4>
+        <h5 class="info__pastName">{{lastName}}</h5>
+        <p class="info__birth">{{birth}}</p>
+        <p>{{userId}} </p>
+    </div>
+   <div class="userCard__options">
+       <button 
+            (click)="delete()"
+            class="options__button options__delete">
+            delete
+        </button>
+       <button 
+            (click)="push()"
+            class="options__button options__push">
+            push
+        </button>
+   </div>
+</li>

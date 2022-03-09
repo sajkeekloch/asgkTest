@@ -1,0 +1,46 @@
+@mixin flexColumn
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+
+@mixin flexRow
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    
+.userCard
+    width: 10vw
+    padding: 10px
+    margin-right: 10px
+    margin-bottom: 10px
+    background-color: #e7e7e7
+    border-radius: 10px
+    margin-bottom: 10px
+    align-self: center
+    @include flexColumn
+    
+    .userCard__info
+        @include flexColumn
+        margin-bottom: 1vw
+        
+    .userCard__options
+        @include flexRow
+
+        .options__button
+            width: 80px
+            height: 30px
+            border: 1px solid
+            
+            &.options__push
+                border-color: #7ca9e4
+                background-color: #7ca9e4
+        
+            &.options__delete
+                border-color: #f75959
+                background-color: #f75959
+
+            &:hover 
+                border-color: green
+                cursor: pointer
+                
+

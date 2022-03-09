@@ -1,0 +1,50 @@
+<form 
+    *ngIf="!(authorized$ | async)"
+    [formGroup] = 'loginForm'
+    (ngSubmit)="submit()"
+    class="authForm"
+    >
+    <h2 
+        class="authForm__title"> 
+        Login
+    </h2>
+    <input 
+        formControlName = 'email'
+        id="email"
+        placeholder="E-mail"
+        class="authForm__input authForm__input_userName"
+        type="name"
+    >
+    <span 
+        class="authForm__validator"
+        *ngIf="email && email.invalid && email.touched"
+    > 
+        incorrect 
+    </span>
+    <input 
+        formControlName = 'password'
+        placeholder="Password"
+        class="authForm__input authForm__input_password"
+        type="password"
+    >
+    <span 
+        class="authForm__validator"
+        *ngIf="password && password.invalid && password.touched"
+    > 
+        password should be at least 8 characters 
+    </span>
+    
+    <input
+        class="authForm__button authForm__button_submit"
+        type="submit"
+        value="submit"
+        [disabled]="loginForm.invalid"
+    >
+    <!-- <button  
+        *ngIf="this.token"   
+        class="authForm__button"
+        (click)="deletoToken()"
+    >
+        delete token
+    </button> -->
+</form>

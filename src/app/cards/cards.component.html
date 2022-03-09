@@ -1,0 +1,21 @@
+<ul 
+    *ngIf="authorized$ | async"
+    class="cards"> 
+    <app-card
+        *ngFor="let card of cardsList; let idx = index"
+        [card] = 'card'
+        [deleteCard] = 'deleteCard'
+        [getCards] = 'getCards'
+        [sendPush]='sendPush'
+    >
+    </app-card>
+</ul>
+
+<button 
+    class="button"
+    *ngIf="authorized$ | async"
+    (click) = 'createNewCard()'
+>
+    new card
+</button>
+
